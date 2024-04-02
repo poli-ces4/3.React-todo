@@ -1,0 +1,52 @@
+/* Form */
+.taskInput {
+	outline: none;
+	width: 260px;
+	padding: 15px;
+	margin-right: 25px;
+	font-size: 20px;
+	color: burlywood;
+	background-color: black;
+	border-radius: 10px;
+	border: 1px solid burlywood;
+}
+
+.button {
+	width: 70px;
+	padding: 15px 15px;
+	font-size: 20px;
+	border: 0;
+	color: burlywood;
+	background-color: black;
+	border-radius: 10px;
+}
+
+/* Header */
+.header h1 {
+	color: aliceblue;
+	text-align: center;
+	margin: 30px 0;
+}
+
+/* Item */
+.list {
+	display: flex;
+	margin: 20px 0;
+	padding: 10px;
+	min-height: 30px;
+}
+
+.listItem {
+	width: 220px;
+	background-color: #12343b;
+	border: none;
+	color: aliceblue;
+	font-size: 20px;
+	padding-left: 20px;
+	margin-right: 15px;
+}
+
+.completed {
+	text-decoration-line: line-through;
+	text-decoration-style: solid;
+}
