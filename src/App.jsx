@@ -2,6 +2,7 @@ import { useState } from 'react';
 import style from './App.module.css';
 import Header from './components/Header/Header';
 import Form from './components/form/Form';
+import ListItem from './components/listItem/ListItem';
 const App = () => {
 	const [inputTodo, setInputTodo] = useState('');
 	const [todos, setTodos] = useState([]);
@@ -12,7 +13,15 @@ const App = () => {
 					<Header />
 				</div>
 				<div>
-					<Form inputTodo={inputTodo} setInputTodo={setInputTodo} />
+					<Form
+						inputTodo={inputTodo}
+						setInputTodo={setInputTodo}
+						todos={todos}
+						setTodos={setTodos}
+					/>
+				</div>
+				<div>
+					<ListItem todos={todos} setTodos={setTodos} />
 				</div>
 			</div>
 		</div>

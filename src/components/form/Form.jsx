@@ -1,7 +1,18 @@
 import style from './Form.module.css';
-const Form = ({ inputTodo, setInputTodo }) => {
+import uuid4 from 'uuid4';
+const Form = ({ inputTodo, setInputTodo, todos, setTodos }) => {
+	const handlerSubmit = e => {
+		e.preventDefault();
+		const newTodo = {
+			id: uuid4(),
+			title: inputTodo,
+			completed: false,
+		};
+		setTodos([...todos, newTodo]);
+		setInputTodo('');
+	};
 	return (
-		<form onSubmit={() => {}}>
+		<form onSubmit={handlerSubmit}>
 			<input
 				className={style.taskInput}
 				type='text'
